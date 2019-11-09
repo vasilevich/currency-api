@@ -30,7 +30,7 @@ class Router
                     "from" => $from,
                     "to" => $to,
                     "source" => $source,
-                    "amount" => $amount, "result" => Converter::convert("USD", "ILS", $amount, $source)]));
+                    "amount" => $amount, "result" => Converter::convert($from, $to, $amount, $source)]));
             return $response->withHeader('content-type', 'application/json');
         });
 
