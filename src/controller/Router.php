@@ -20,10 +20,10 @@ class Router
     {
         $this->app->get('/api/convert', function (Request $request, Response $response, array $args) {
             $queryParams = $request->getQueryParams();
-            $from = isset($queryParams['from']) ? $queryParams['from'] : "ILS";
-            $to = isset($queryParams['to']) ? $queryParams['to'] : "USD";
+            $from = isset($queryParams['from']) ? strtoupper(trim($queryParams['from'])) : "ILS";
+            $to = isset($queryParams['to']) ? strtoupper(trim($queryParams['to'])) : "USD";
             $amount = isset($queryParams['amount']) ? $queryParams['amount'] : 1;
-            $source = isset($queryParams['source']) ? $queryParams['source'] : Converter::ISRAEL_SOURCE;
+            $source = isset($queryParams['source']) ? strtolower(trim($queryParams['source'])) : Converter::ISRAEL_SOURCE;
             $response
                 ->getBody()
                 ->write(json_encode([
