@@ -25,34 +25,30 @@ class Router
             $amount = isset($queryParams['amount']) ? $queryParams['amount'] : 1;
             $source = isset($queryParams['source']) ? $queryParams['source'] : Converter::ISRAEL_SOURCE;
             $response
-                ->withHeader('Content-type', 'application/json')
                 ->getBody()
                 ->write(json_encode([
                     "from" => $from,
                     "to" => $to,
                     "source" => $source,
                     "amount" => $amount, "result" => Converter::convert("USD", "ILS", $amount, $source)]));
-
-            return $response;
+            return $response->withHeader('content-type', 'application/json');
         });
 
         $this->app->get('/api/rates', function (Request $request, Response $response, array $args) {
             $queryParams = $request->getQueryParams();
             $source = $queryParams['source'];
             $response
-                ->withHeader('Content-type', 'application/json')
                 ->getBody()
                 ->write(Converter::getSource($source)->getCurrencyList()->serialize());
-            return $response;
+            return $response->withHeader('Content-type', 'application/json');
         });
 
         $this->app->get('/api/sources', function (Request $request, Response $response, array $args) {
             $queryParams = $request->getQueryParams();
             $response
-                ->withHeader('Content-type', 'application/json')
                 ->getBody()
                 ->write(json_encode(Converter::getAvailableConverters()));
-            return $response;
+            return $response->withHeader('Content-type', 'application/json');
         });
         $this->app->run();
     }
