@@ -1,0 +1,16 @@
+{
+  "name": "vasilevich/currency-api",
+  "description": "A simple web API that is able to use currently 3 sources to convert currency, with built in caching, results are cached for exactly a day.",
+  "authors": [
+    {
+      "name": "yosef langer",
+      "email": "yosef@doar.systems"
+    }
+  ],
+  "require": {
+    "slim/slim": "^4.3",
+    "slim/psr7": "^0.6.0",
+    "vasilevich/currencyconverter": "^1.0",
+    "phpfastcache/phpfastcache": "^7.1"
+  }
+}
