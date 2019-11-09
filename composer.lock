@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1dc2ac62d094203436113b3ddec528c",
+    "content-hash": "c1c883c40bf82513286a3ccdf107f10c",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -759,16 +759,16 @@
         },
         {
             "name": "vasilevich/currencyconverter",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vasilevich/currencyconverter.git",
-                "reference": "432ae914b28d92b4b6f18b2685cea12232c7a176"
+                "reference": "620ad5f3f3054729f4b162be726e58149afa4942"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vasilevich/currencyconverter/zipball/432ae914b28d92b4b6f18b2685cea12232c7a176",
-                "reference": "432ae914b28d92b4b6f18b2685cea12232c7a176",
+                "url": "https://api.github.com/repos/vasilevich/currencyconverter/zipball/620ad5f3f3054729f4b162be726e58149afa4942",
+                "reference": "620ad5f3f3054729f4b162be726e58149afa4942",
                 "shasum": ""
             },
             "type": "library",
@@ -788,7 +788,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A simple currency converter purely converting currency without any additional overhead.  is able to use Bank Of Israel, and Bank Of Europe as a base",
+            "description": "A simple currency converter purely converting currency without any additional overhead.  is able to use Bank Of Israel, Bank Of Europe and Denmark as of now, as a base.",
             "keywords": [
                 "Europe",
                 "ILS",
@@ -798,7 +798,7 @@
                 "currency",
                 "euro"
             ],
-            "time": "2019-11-09T11:08:33+00:00"
+            "time": "2019-11-09T16:59:35+00:00"
         }
     ],
     "packages-dev": [],

@@ -10,7 +10,7 @@
   "require": {
     "slim/slim": "^4.3",
     "slim/psr7": "^0.6.0",
-    "vasilevich/currencyconverter": "^1.0",
-    "phpfastcache/phpfastcache": "^7.1"
+    "phpfastcache/phpfastcache": "^7.1",
+    "vasilevich/currencyconverter": "^1.0"
   }
 }
